@@ -7,26 +7,39 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to Mando’s Haircut Booking</h1>
-    <form id="booking-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="phone">Phone:</label>
-      <input type="text" id="phone" name="phone" required>
-
-      <label for="date">Date:</label>
-      <input type="date" id="date" name="date" required>
-
-      <label for="time">Time:</label>
-      <input type="time" id="time" name="time" required>
-
-      <button type="submit">Book Appointment</button>
-    </form>
-    <p id="response-msg"></p>
-  </div>
-
+    <p style="color: darkred; font-weight: bold;">
+        Available only on <u>Tuesdays</u> and <u>Thursdays</u>
+      </p>
+    <form id="bookingForm">
+        <label>Name:</label>
+        <input type="text" name="name" required />
+      
+        <label>Phone:</label>
+        <input type="tel" name="phone" required />
+      
+        <label>Date:</label>
+        <input type="date" name="date" id="date" required />
+      
+        <label>Time:</label>
+        <select name="time" id="time" required>
+          <option value="">Select a time</option>
+        </select>
+      
+        <label>Location Type:</label>
+        <select name="locationType" required>
+          <option value="on-campus">On Campus</option>
+          <option value="off-campus">Off Campus</option>
+        </select>
+      
+        <label>Exact Location:</label>
+        <input type="text" name="locationDetails" required />
+      
+        <button type="submit">Book Appointment</button>
+      </form>
+      
+      <div id="message"></div>
+    
+      
   <script src="js/script.js"></script>
 </body>
 </html>
